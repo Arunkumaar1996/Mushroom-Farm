@@ -75,7 +75,7 @@
             {{-- <div class="start mt-3 h5">
                 Bidding Starting Time : <span class="h4 text-danger">{{$datas->startingtime}}</span>
             </div> --}}
-            <div class="button">
+            <div class="button mb-3">
                 <a href="{{url('orderPage')}}/{{$datas->id}}"><button type="button" class="btn btn-primary mt-5">Order Now</button></a>
             </div>   
         </div>

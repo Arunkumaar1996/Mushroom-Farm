@@ -46,9 +46,9 @@
                 <div class="card-body">
                   <div class="card-title h6" style="font-weight: 600;">{{$data->productName}}</div>
                   <div class="card-text m-1">
-                    <P class="lh-1" style="margin: 5px;">{{$data->description}}</P>
-                    <p class=""><del>{{$data->price}}</del> <span class="text-success h6 ">{{$data->discount}}% off</span></p>
-                    <div class="h5" style="margin: 5px;"><?php $str1=$data->discount;$str2=$data->price; $str3=$str2*($str1/100);$disPrice=$str2-$str3;print_r($disPrice);  ?></div>
+                    <P class="lh-1" style="margin: 5px;"><?php $str1=explode(' ',"$data->description");print_r($str1[0].' '.$str1[1].' '.$str1[2].' '.$str1[3].' '.$str1[4]);   ?></P>
+                    <p class="text-danger">Rs. <del>{{$data->price}}</del> <span class="text-success h6 ">{{$data->discount}}% off</span></p>
+                    <div class="h5" style="margin: 5px;">Rs. <?php $str1=$data->discount;$str2=$data->price; $str3=$str2*($str1/100);$disPrice=$str2-$str3;print_r($disPrice);  ?></div>
                     <div class="d-grid gap-1 col-12 mx-auto">
                         <button class="btn btn-primary"><a href="{{url('productDetails')}}/{{$data->id}}">View</a></button> 
                     </div>
